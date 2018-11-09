@@ -1,13 +1,23 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 function Ticket(props){
   return (
-      <div>
-        <h3>{props.location} - {props.names}</h3>
-        <p><em>{props.issue}</em></p>
-        <hr/>
-      </div>
+    <div>
+      <style jsx global> {`
+          hr {
+            border-color: red;
+            border: 20px dotted cornflowerblue;
+            border-radius: 25%;
+            shape-padding: 500px;
+            padding: 50px;
+
+          }
+            `}</style>
+      <h3>{props.location} - {props.names}</h3>
+      <li className='styled'><em>{props.issue}</em></li>
+      <hr/>
+    </div>
   );
 }
 
